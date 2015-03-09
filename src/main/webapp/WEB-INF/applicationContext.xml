@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans default-lazy-init="true">
+
+	<bean id="clientStoreService" class="com.geoblink.clientStore.service.impl.ClientStoreService">
+		<property name="dao">
+			<ref bean="clientStoreDAO"/>
+		</property>
+	
+	</bean>
+	
+	<bean id="clientStoreDAO" class="com.geoblink.clientStore.dao.impl.ClientStoreDAO"></bean>		
+
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+
+	<class name="com.geoblink.clientStore.pojo.ClientStore" table="client_store">
+	
+		<id name="idStore" type="java.lang.Integer" column="id_store">
+			<generator class="sequence">
+				<param name="sequence">sec_client_store</param>
+			</generator>
+		</id>	
+		
+		<property name="name" type="java.lang.String" not-null="true" column="name"/>
+		<property name="telephone" type="java.lang.String" not-null="true" column="telephone"/>
+		<property name="sales" type="java.math.BigDecimal" not-null="true" column="sales"/>
+		<property name="city" type="java.lang.String" not-null="true" column="city"/>
+		<property name="idBrand" type="java.lang.Integer" not-null="true" column="id_brand"/>
+		<property name="idCompany" type="java.lang.Integer" not-null="true" column="id_company"/>
+		<property name="latitude" type="org.hibernate.spatial.GeometryType" not-null="true" column="latitude"/>
+		<property name="longitude" type="org.hibernate.spatial.GeometryType" not-null="true" column="longitude"/>
+	
+	</class>
+
+</hibernate-mapping>
